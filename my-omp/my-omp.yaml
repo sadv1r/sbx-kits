@@ -1,0 +1,53 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: workload
+displayName: omp
+description: The omp terminal coding agent.
+sourceUrl: https://omp.sh
+version: "1.0.0"
+provides: ["my-omp"]
+
+args:
+  version:
+    default: latest
+    pattern: '^(latest|[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?)$'
+    description: omp release to install (latest or an exact version)
+    buildArg: OMP_VERSION
+
+capabilities:
+  - type: com.docker.sandbox/sbx@1
+
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow: ["**"]
+        deny:
+          # IPv4 private networks
+          - "10.0.0.0/8"
+          - "172.16.0.0/12"
+          - "192.168.0.0/16"
+
+          # Loopback, link-local (including common metadata endpoints),
+          # shared address space, and unspecified/current-network addresses
+          - "127.0.0.0/8"
+          - "169.254.0.0/16"
+          - "100.64.0.0/10"
+          - "0.0.0.0/8"
+
+          # IPv6 local addresses
+          - "::/128"
+          - "::1/128"
+          - "fc00::/7"
+          - "fe80::/10"
+
+          # Docker host access names
+          - host.docker.internal
+          - gateway.docker.internal
+
+  - type: com.docker.sandbox/agent-sessions@1
+    config:
+      prompt: ["--print", "{{.Prompt}}"]
+
+  - type: com.docker.sandbox/agent-context@1
+    config:
+      filename: AGENTS.md
