@@ -1,0 +1,28 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Codex OAuth
+
+capabilities:
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - auth.openai.com:443
+          - chatgpt.com:443
+
+  # Match the host service and OAuth endpoints in Docker's Codex kit.
+  # https://github.com/docker/sbx-kits-contrib/blob/main/codex/spec.yaml
+  - type: com.docker.sandbox/credential@1
+    config:
+      service: openai
+      phase: runtime
+      oauth:
+        tokenEndpoint:
+          host: auth.openai.com
+          path: /oauth/token
+        resourceHosts:
+          - chatgpt.com
+        sentinels:
+          accessToken: oai-oat01-proxy-managed
+          refreshToken: oai-ort01-proxy-managed
