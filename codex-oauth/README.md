@@ -7,6 +7,12 @@ Add Codex OAuth to a Docker Sandbox workload.
 sbx secret set openai --oauth
 ```
 
+## Pi Agent example
+
+```sh
+sbx run --kit ./codex-oauth sbx/pi /path/to/project
+```
+
 ## omp example
 
 ```sh
