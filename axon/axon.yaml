@@ -1,0 +1,22 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Axon provider for Pi and omp
+
+capabilities:
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - axon.bz:443
+  - type: com.docker.sandbox/credential@1
+    config:
+      service: axon
+      phase: runtime
+      apiKey:
+        name: AXON_API_KEY
+        proxyManaged: true
+        inject:
+          - domain: axon.bz
+            header: authorization
+            format: "Bearer %s"

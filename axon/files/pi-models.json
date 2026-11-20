@@ -1,0 +1,125 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "axon-claude": {
+      "name": "Axon — Claude",
+      "baseUrl": "https://axon.bz",
+      "apiKey": "$AXON_API_KEY",
+      "api": "anthropic-messages",
+      "models": [
+        {
+          "id": "claude-opus-4-8",
+          "name": "Claude Opus 4.8"
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5"
+        },
+        {
+          "id": "claude-opus-5-5",
+          "name": "Claude Opus 5.5"
+        },
+        {
+          "id": "claude-opus-4-7",
+          "name": "Claude Opus 4.7"
+        },
+        {
+          "id": "claude-opus-4-6",
+          "name": "Claude Opus 4.6"
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5"
+        },
+        {
+          "id": "claude-fable-5",
+          "name": "Claude Fable 5"
+        }
+      ]
+    },
+    "axon": {
+      "name": "Axon — GPT",
+      "baseUrl": "https://axon.bz/v1",
+      "apiKey": "$AXON_API_KEY",
+      "api": "openai-responses",
+      "models": [
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra"
+        },
+        {
+          "id": "gpt-6-sol",
+          "name": "GPT-6 Sol"
+        },
+        {
+          "id": "gpt-6-luna",
+          "name": "GPT-6 Luna"
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol"
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra"
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna"
+        },
+        {
+          "id": "gpt-5.5",
+          "name": "GPT-5.5"
+        }
+      ]
+    },
+    "axon-chinese": {
+      "name": "Axon — More models",
+      "baseUrl": "https://axon.bz/v1",
+      "apiKey": "$AXON_API_KEY",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "deepseek-v4-pro-0813",
+          "name": "DeepSeek V4 Pro"
+        },
+        {
+          "id": "deepseek-v4-flash-0731",
+          "name": "DeepSeek V4 Flash"
+        },
+        {
+          "id": "deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash"
+        },
+        {
+          "id": "deepseek-v4-pro-uncensored",
+          "name": "DeepSeek V4 Pro Uncensored"
+        },
+        {
+          "id": "grok-4.7",
+          "name": "Grok 4.7"
+        },
+        {
+          "id": "grok-4.6",
+          "name": "Grok 4.6"
+        },
+        {
+          "id": "grok-4.5",
+          "name": "Grok 4.5"
+        },
+        {
+          "id": "glm-5.2",
+          "name": "GLM-5.2"
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3"
+        },
+        {
+          "id": "glm-5.3-flash",
+          "name": "GLM-5.3 Flash"
+        }
+      ]
+    }
+  }
+}
