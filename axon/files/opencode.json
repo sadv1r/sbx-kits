@@ -1,10 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "provider": {
+  "providers": {
     "axon-claude": {
-      "npm": "@ai-sdk/anthropic",
+      "package": "aisdk:@ai-sdk/anthropic",
       "name": "Axon — Claude",
-      "options": {
+      "settings": {
         "baseURL": "https://axon.bz/v1",
         "apiKey": "{env:AXON_API_KEY}"
       },
@@ -33,9 +33,9 @@
       }
     },
     "axon": {
-      "npm": "@ai-sdk/openai",
+      "package": "aisdk:@ai-sdk/openai",
       "name": "Axon — GPT",
-      "options": {
+      "settings": {
         "baseURL": "https://axon.bz/v1",
         "apiKey": "{env:AXON_API_KEY}"
       },
@@ -64,9 +64,9 @@
       }
     },
     "axon-chinese": {
-      "npm": "@ai-sdk/openai-compatible",
+      "package": "aisdk:@ai-sdk/openai-compatible",
       "name": "Axon — More models",
-      "options": {
+      "settings": {
         "baseURL": "https://axon.bz/v1",
         "apiKey": "{env:AXON_API_KEY}"
       },
