@@ -7,6 +7,12 @@ Add Axon models to a Docker Sandbox workload.
 sbx secret set axon
 ```
 
+## OpenCode example
+
+```sh
+sbx run --kit ./axon sbx/opencode /path/to/project
+```
+
 ## Pi Agent example
 
 ```sh
