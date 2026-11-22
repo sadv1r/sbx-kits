@@ -43,8 +43,8 @@ LABEL com.docker.sandboxes.start-docker="true"
 # Both of the labels below OVERRIDE values inherited from the base image, which
 # describe the base rather than this image. Overriding is not optional for
 # `flavor`: left inherited it would read "shell-docker", and sbx would report
-# this image's agent as "shell-docker". So it must be the kit's own name: `my-omp`.
-LABEL com.docker.sandboxes.flavor="my-omp"
+# this image's agent as "shell-docker". So it must be the kit's own name: `omp`.
+LABEL com.docker.sandboxes.flavor="omp"
 
 # Informational only -- nothing in sbx reads this. Worth setting because the
 # base is a floating tag rebuilt nightly, so this is the one place the produced

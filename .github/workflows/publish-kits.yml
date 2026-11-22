@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/publish-kits.yml'
-      - 'my-omp/**'
+      - 'omp/**'
       - 'axon/**'
       - 'codex-oauth/**'
 
@@ -21,7 +21,7 @@ jobs:
       packages: write
     strategy:
       matrix:
-        kit: [my-omp, axon, codex-oauth]
+        kit: [omp, axon, codex-oauth]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

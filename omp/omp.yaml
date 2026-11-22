@@ -5,7 +5,7 @@ displayName: omp
 description: The omp terminal coding agent.
 sourceUrl: https://omp.sh
 version: "1.0.0"
-provides: ["my-omp"]
+provides: ["omp"]
 
 args:
   version:

@@ -2,7 +2,7 @@
 schemaVersion: "3"
 kind: mixin
 displayName: Axon provider for OpenCode, Pi, omp
-integrates: [opencode, pi, my-omp]
+integrates: [opencode, pi, omp]
 
 capabilities:
   - type: com.docker.sandbox/network-policy@1
