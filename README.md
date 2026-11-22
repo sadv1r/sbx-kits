@@ -7,14 +7,7 @@ Docker Sandbox kits for running coding agents with the `sbx` CLI.
 
 ## Publish to GitHub Container Registry
 
-Push a new tag on the commit to release, for example:
-
-```sh
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-GitHub Actions builds kits for Linux amd64 and arm64 and pushes each to GHCR with the numeric tag (`1.0.0` in this example).
+GitHub Actions builds kits for Linux amd64 and arm64 and pushes each to GHCR as `:latest`. No Git tag or GitHub Release is needed.
 The workflow uses the repository's `GITHUB_TOKEN`; no PAT secret is required for CI.
 If a package already exists, grant this repository write access in the package's **Manage Actions access** settings.
 
