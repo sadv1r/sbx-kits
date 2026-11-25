@@ -2,7 +2,7 @@
 
 Docker Sandbox kits for running coding agents with the `sbx` CLI.
 
-- **Workloads** run an agent: [OpenCode](https://github.com/docker/sbx-kits-contrib/tree/v3/opencode), [omp](omp/), or [pi](https://github.com/docker/sbx-kits-contrib/tree/v3/pi).
+- **Workloads** run an agent: [Pi](pi/), [omp](omp/), or [OpenCode](https://github.com/docker/sbx-kits-contrib/tree/v3/opencode).
 - **Mixins** extend a compatible workload: [Codex OAuth](codex-oauth/) adds Codex sign-in, and [Axon](axon/) adds Axon models.
 
 ## Publish to GitHub Container Registry
@@ -24,7 +24,7 @@ For private packages, configure a host pull credential once (the `gh` token must
 gh auth token | sbx secret set --registry ghcr.io --password-stdin
 ```
 
-After all three publish jobs succeed, run from the project directory:
+After all publish jobs succeed, run from the project directory:
 
 ```sh
 sbx run --kit ghcr.io/sadv1r/axon \
