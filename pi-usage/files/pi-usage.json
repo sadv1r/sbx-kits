@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "accounts": [
+    {
+      "id": "refuseless",
+      "name": "Refuseless",
+      "provider": "refuseless",
+      "request": {
+        "url": "https://api.refuseless.com/v1/credits",
+        "method": "GET",
+        "usePiAuth": true,
+        "headers": {
+          "Authorization": "Bearer ${token}"
+        }
+      },
+      "response": {
+        "metrics": [
+          {
+            "kind": "balance",
+            "label": "Balance",
+            "remaining": {
+              "path": "available"
+            },
+            "unit": {
+              "value": "USD"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

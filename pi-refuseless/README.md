@@ -1,6 +1,6 @@
 # pi-refuseless
 
-Add the [Refuseless](https://refuseless.com) model provider to Pi in a Docker Sandbox. The mixin packages [`pi-refuseless`](https://github.com/kylinholmes/pi-refuseless) v0.1.1 from its immutable release commit and verifies the source checksums while building.
+Add the [Refuseless](https://refuseless.com) model provider to Pi in a Docker Sandbox. The mixin packages [`pi-refuseless`](https://github.com/kylinholmes/pi-refuseless) v0.1.1 from an immutable, checksum-verified source.
 
 ```sh
 # Save the Refuseless API key once on the host.

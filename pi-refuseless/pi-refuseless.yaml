@@ -2,7 +2,7 @@
 schemaVersion: "3"
 kind: mixin
 displayName: Refuseless provider for Pi
-description: Refuseless models for Pi through the pinned pi-refuseless extension.
+description: Refuseless model provider for Pi.
 sourceUrl: https://github.com/kylinholmes/pi-refuseless
 version: "0.1.1"
 licenses: [MIT]

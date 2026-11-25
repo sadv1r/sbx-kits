@@ -1,0 +1,10 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Usage reporting for Pi
+description: Account usage and balance reporting for Pi, with built-in Refuseless support.
+sourceUrl: https://github.com/sadv1r/pi-usage
+version: "0.1.0"
+licenses: [MIT]
+provides: ["com.github.sadv1r/pi-usage@0.1.0"]
+integrates: [pi]
