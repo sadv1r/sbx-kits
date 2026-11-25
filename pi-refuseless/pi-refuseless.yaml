@@ -1,0 +1,29 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Refuseless provider for Pi
+description: Refuseless models for Pi through the pinned pi-refuseless extension.
+sourceUrl: https://github.com/kylinholmes/pi-refuseless
+version: "0.1.1"
+licenses: [MIT]
+provides: ["pi-refuseless@0.1.1"]
+integrates: [pi]
+
+capabilities:
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - api.refuseless.com:443
+
+  - type: com.docker.sandbox/credential@1
+    config:
+      service: refuseless
+      phase: runtime
+      apiKey:
+        name: REFUSELESS_API_KEY
+        proxyManaged: true
+        inject:
+          - domain: api.refuseless.com
+            header: Authorization
+            format: "Bearer %s"

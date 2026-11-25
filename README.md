@@ -3,7 +3,7 @@
 Docker Sandbox kits for running coding agents with the `sbx` CLI.
 
 - **Workloads** run an agent: [Pi](pi/), [omp](omp/), or [OpenCode](https://github.com/docker/sbx-kits-contrib/tree/v3/opencode).
-- **Mixins** extend a compatible workload: [Codex OAuth](codex-oauth/) adds Codex sign-in, and [Axon](axon/) adds Axon models.
+- **Mixins** extend a compatible workload: [Codex OAuth](codex-oauth/) adds Codex sign-in, [Axon](axon/) adds Axon models, and [pi-refuseless](pi-refuseless/) adds Refuseless models to Pi.
 
 ## Publish to GitHub Container Registry
 
