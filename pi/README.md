@@ -2,7 +2,7 @@
 
 Run [Pi](https://pi.dev), a minimal extensible terminal coding agent, in a Docker Sandbox.
 
-The kit installs the latest Pi release by default, accepts an exact release through its `version` build argument, includes `fd` for Pi's find tool, and supports shared agent skills.
+The kit installs the latest Pi release by default, accepts an exact release through its `version` build argument, includes `fd` for Pi's find tool, supports shared agent skills, and sends clipboard copies to the attached terminal with OSC 52.
 
 ## Usage
 

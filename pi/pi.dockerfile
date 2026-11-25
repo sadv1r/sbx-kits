@@ -53,6 +53,13 @@ RUN set -eu; \
 USER root
 RUN ln -sf "$(npm prefix -g)/bin/pi" /usr/local/bin/pi
 
+# The sandbox terminal, not a Wayland compositor inside the container, owns the
+# user's clipboard. Pi otherwise prefers `wl-copy` whenever WAYLAND_DISPLAY is
+# present and reports an unavailable clipboard when that socket or binary is
+# inaccessible. This supported override makes Pi emit OSC 52 to the attached
+# terminal, matching the clipboard path that works for omp.
+ENV PI_CLIPBOARD_OSC52=1
+
 # Inherited from the base image, but re-declared deliberately so the value is
 # owned here rather than depending on inheritance.
 #
