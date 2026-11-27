@@ -12,6 +12,7 @@ on:
       - 'pi-refuseless/**'
       - 'pi-usage/**'
       - 'rpiv-ask-user-question/**'
+      - 'pi-subagents/**'
 
 concurrency:
   group: publish-kits-latest
@@ -25,7 +26,7 @@ jobs:
       packages: write
     strategy:
       matrix:
-        kit: [pi, omp, axon, codex-oauth, pi-refuseless, pi-usage, rpiv-ask-user-question]
+        kit: [pi, omp, axon, codex-oauth, pi-refuseless, pi-usage, rpiv-ask-user-question, pi-subagents]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

@@ -1,0 +1,10 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Subagents for Pi
+description: Subagent delegation and multi-agent workflows for Pi.
+sourceUrl: https://www.npmjs.com/package/pi-subagents
+version: "0.90.0"
+licenses: [MIT]
+provides: ["pi-subagents@0.90.0"]
+integrates: [pi]
