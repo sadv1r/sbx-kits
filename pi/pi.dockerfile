@@ -24,6 +24,11 @@ RUN apt-get update && \
 USER agent
 RUN mkdir -p /home/agent/.agents
 
+# The sandbox is the isolation boundary. Trust projects by default without
+# overriding explicit trust decisions.
+RUN mkdir -p /home/agent/.pi/agent && \
+    printf '%s\n' '{"defaultProjectTrust":"always"}' > /home/agent/.pi/agent/settings.json
+
 # The v3 kit argument `version` maps to PI_VERSION. Fetching the npm release
 # metadata with ADD makes its contents part of the build cache key. A new
 # `latest` release triggers a reinstall, while an exact version keeps using its
