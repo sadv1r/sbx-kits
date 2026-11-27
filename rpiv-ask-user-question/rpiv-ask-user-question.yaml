@@ -1,0 +1,10 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Ask User Question for Pi
+description: Structured interactive questionnaires for Pi.
+sourceUrl: https://www.npmjs.com/package/@juicesharp/rpiv-ask-user-question
+version: "2.16.0"
+licenses: [MIT]
+provides: ["rpiv-ask-user-question@2.16.0"]
+integrates: [pi]
